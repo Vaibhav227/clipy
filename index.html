@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="brand-name">Clipy</span>
+        <span class="brand-hint">
+          <span class="brand-hint-line"
+            >Newest at top. In Clipy: keys <span class="kbd">1</span>–<span
+              class="kbd"
+              >9</span
+            >
+            (and <span class="kbd">0</span> for #10) copy that row; then paste
+            elsewhere (<span class="kbd">⌘V</span> /
+            <span class="kbd">Ctrl+V</span>).</span
+          >
+          <span class="brand-hint-line brand-hint-strong"
+            >From any other app: <span class="kbd">⌥⌘1</span>–<span class="kbd"
+              >⌥⌘9</span
+            >
+            and <span class="kbd">⌥⌘0</span> for #10 (Windows/Linux:
+            <span class="kbd">Ctrl+Alt+1</span>–<span class="kbd">0</span>)
+            puts that numbered clip on the clipboard and tries to paste into the
+            focused field. On macOS, allow Accessibility for Clipy if
+            auto-paste is blocked; you can always paste manually with
+            <span class="kbd">⌘V</span>.</span
+          >
+        </span>
+      </div>
+      <label class="max-control">
+        <span class="max-label">Keep</span>
+        <input
+          id="maxItems"
+          class="max-input"
+          type="number"
+          min="1"
+          max="200"
+          step="1"
+        />
+        <span class="max-suffix">items</span>
+      </label>
+    </header>
+
+    <main>
+      <ul id="list" class="list" aria-live="polite"></ul>
+      <p id="empty" class="empty hidden">Copy something — new clips appear here.</p>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

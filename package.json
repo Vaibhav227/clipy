@@ -1,0 +1,31 @@
+{
+  "name": "clipy",
+  "version": "1.0.0",
+  "description": "Electron clipboard history (last N text clips)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "forge:import": "pnpm exec electron-forge import",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-deb": "^7.11.1",
+    "@electron-forge/maker-rpm": "^7.11.1",
+    "@electron-forge/maker-squirrel": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^42.0.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
